@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://unpkg.com/layui@2.7.6/dist/css/layui.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+
+    <script src="https://unpkg.com/layui@2.7.6/dist/layui.js"></script>
+    <style>
+         .pink {
+            background-color: pink;
+        }
+        .skyblue {
+            background-color: skyblue;
+        }
+         .lightgreen {
+            background-color: lightgreen
+        }
+
+      #a a {
+        position: relative;
+         left: 1350px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        box-shadow: -1px 1px 11px 0px #888888;
+        border-radius: 10px;
+      }
+      .layui-col-md3 div {
+        width: 260px;
+        height: 70px;
+        border-radius: 10px;
+        margin-left: 40px;
+        margin-top: 20px;
+      }
+      .a {
+        position: relative;
+        left: 1550px;
+        top: 70px;
+      }
+      .a button {
+        width: 100px;
+        height: 30px;
+        background-color: aquamarine;
+
+        border: none;
+      }
+      .b{
+       position: relative;
+    top: 200px;
+    left: 220px;
+      }
+      .aa{
+     margin-left:100px;
+        display: none;
+      }
+      #hui{
+     margin-left:100px;
+        display: none;
+      }
+      .bb {
+        margin-left: 200px;
+        width: 60px;
+        height: 40px;
+        background-color: greenyellow;
+        border: none;
+      }
+      .sou{
+        position: relative;
+        left: 220px;
+    top: 180px;
+      width:230px;
+      }
+     table td{
+        width:103px;
+        height:50px;
+        text-align: center;
+     }
+       table th{
+        width:103px;
+         height:50px;
+            text-align: center;
+     }
+     .tian{
+        position: relative;
+        top: 136px;
+    left: -1100px;
+
+     }
+     .del{
+width:50px;
+height:40px;
+margin-left:10px;
+background-color: red;
+border:none
+     }
+     #cha{
+width:50px;
+height:40px;
+     }
+     #xiu{
+width:50px;
+height:40px;
+margin-left:10px;
+     }
+     .zui{
+      width:250px;
+     }
+    </style>
+  </head>
+  <body >
+    <ul class="layui-nav layui-nav-tree layui-nav-side">
+      <li class="layui-nav-item">
+        <a href="">仪表盘</a>
+      </li>
+      <li class="layui-nav-item"><a href="javascript:;">分类管理</a></li>
+      <li class="layui-nav-item"><a href="">讲师管理</a></li>
+      <li class="layui-nav-item layui-nav-itemed">
+        <a href="javascript:;">课程管理</a>
+        <dl class="layui-nav-child">
+          <dd><a href="javascript:;">选项1</a></dd>
+          <dd><a href="javascript:;">选项2</a></dd>
+          <dd><a href="">跳转</a></dd>
+        </dl>
+      </li>
+    </ul>
+    <ul id="a" class="layui-nav">
+      <li class="layui-nav-item">
+        <a href="">控制台<span class="layui-badge">9</span></a>
+      </li>
+      <li class="layui-nav-item">
+        <a
+          href=""
+          >个人中心<span class="layui-badge-dot"></span
+        ></a>
+      </li>
+      <li class="layui-nav-item">
+        <a href=""
+          ><img
+            src="https://bpic.588ku.com/element_pic/21/06/15/b44e452a42efb527445df3a4add6449f.jpg"
+            class="layui-nav-img"
+          />主题色</a
+        >
+        <dl class="layui-nav-child">
+          <dd id="lan"><a href="javascript:;">蓝色</a></dd>
+          <dd id="lv"><a href="javascript:;">绿色</a></dd>
+          <dd id="fen"><a href="javascript:;">粉色</a></dd>
+        </dl>
+      </li>
+    </ul>
+    
+    <div class="bbox">
+    <div class="a">
+      <button class="tian">添加讲师</button>
+    </div>
+     <div class="sou">
+      <input class="sousuok" type="text">
+      <button class="sousuo">搜索</button>
+    </div>
+    <div class="b">
+    <table border="1" style="border-collapse: collapse">
+        <tr>
+              <th><input type="checkbox"></th>
+          <th>编号</th>
+          <th>歌名</th>
+          <th>歌手</th>
+          <th>专辑</th>
+          <th>发行日期</th>
+          <th>风格</th>
+          <th>长度</th>
+         <th>创建时间</th>
+          <th>更新时间</th>
+           <th>图片</th>
+             <th>操作</th>
+        </tr>
+        
+         <!-- <tr>
+            <td>1</td>
+            <td>李</td>
+            <td>易安居士</td>
+            <td>我</td>
+            <td>女</td>
+            <td>啊</td>
+              <td>啊</td>
+                <td>啊</td>
+              <td>啊</td>
+                <td>啊</td>
+            <td><button>查看</button><button>修改</button><button>删除</button></td>
+          </tr> -->
+        
+      </table>
+      <a href="#">上一页</a>
+      <a href="#">下一页</a>
+    </div>
+    </div>
+    <form class="aa">
+       歌名：<input type="text" class="title" /><br /><br />
+      歌手：<input type="text" class="artist" /><br /><br />
+      专辑：<input type="text" class="album" /><br /><br />
+      发行时间：<input type="text" class="year" /><br /><br />
+       风格：<input type="text" class="genre" /><br /><br />
+     <input class="bb" type="submit" value="添加" id="submit" />
+    </form>
+    <form id="hui">
+       歌名：<input type="text" class="title2" /><br /><br />
+      歌手：<input type="text" class="artist2" /><br /><br />
+      专辑：<input type="text" class="album2" /><br /><br />
+      发行时间：<input type="text" class="year2" /><br /><br />
+       风格：<input type="text" class="genre2" /><br /><br />
+     <input class="bb" type="submit" value="确认修改" id="submits" />
+    </form>
+  </body>
+  <script>
+   
+
+        
+   
+        
+
+       
+    //变色
+   //3.0获取本地仓库中localColor的值,没有就不作改变
+    var getLocalColor = window.localStorage.getItem("localColor")
+    if(getLocalColor){
+        document.body.className = getLocalColor;
+    }else{
+ 
+    }
+
+ $('#lan').on('click', function(){
+   
+   document.body.className = "skyblue";
+    
+       window.localStorage.setItem('localColor','skyblue');
+ })
+    $('#lv').on('click', function(){
+  
+    document.body.className = "lightgreen";
+    
+       window.localStorage.setItem('localColor','lightgreen');
+ })
+ $('#fen').on('click', function(){
+   
+     document.body.className = "pink";
+    
+       window.localStorage.setItem('localColor','pink');
+ })
+ ;(function(){
+ ajax()
+ })()
+
+
+
+
+    //分页
+    let page=1,
+    limit=10;
+      function ajax(){
+       $.ajax({
+          url: 'https://mp3.zzgoodqc.cn/api/songs',
+          type: "GET", //接口请求方式post/get
+          dataType: "json", //返回的数据类型格式
+    
+    data: {
+       page:1,
+       pageSize:100
+       
+    },
+             
+          success: function (data) {
+            console.log(data.data); //请求的回调，成功
+           // show(data.data.data)
+          
+        let str = "";
+    
+        data.data.forEach((item, index) => {
+          str += `<tr>
+            <td><input type="checkbox"></td> 
+                <td id="birthdata">${item.id}</td>
+                 <td>${item.title}</td> 
+                   <td id="name">${item.artist}</td>
+            <td class="ids">${item.album}</td>
+           <td>${item.year}</td>      
+            <td>${item.genre}</td>
+             <td>${item.length}</td>     
+            <td>${item.created_at}</td>
+   <td>${item.updated_at}</td>   
+            <td id="sex">${item.image_url}</td>                                                       
+            <td class="zui"><button class="chakan" id="cha" data-id=${item.id}>查看</button><button data-title=${item.title} data-artist=${item.artist} data-album=${item.album} data-year=${item.year} data-genre=${item.genre} name="xiu" id="xiu">编辑</button><button data-index="${
+           index + 1
+         }" class="del" data-id=${item.id}>删除</button></td>
+          </tr>`;
+        //console.log($(this).parents(".ids"))//返回class为mui-content的父节点
+        });    
+        /* $("table").prepend($('tr:eq(0)'));
+         console.log($('tr:eq(0)')); */
+         $("table").html(str);
+        $("table").prepend(`<tr>
+              <th><input type="checkbox"></th>
+          <th>编号</th>
+          <th>歌名</th>
+          <th>歌手</th>
+          <th>专辑</th>
+          <th>发行日期</th>
+          <th>风格</th>
+          <th>长度</th>
+         <th>创建时间</th>
+          <th>更新时间</th>
+           <th>图片</th>
+             <th>操作</th>
+        </tr>`)
+          },       
+        })  
+         //删除
+      $("table").on("click", 'button[class="del"]', function () {
+    
+        //console.log($(this).parents(".ids"))//返回class为mui-content的父节点
+       console.log($(this));
+        let ids = $(this).attr('data-id')
+      console.log(ids);
+        $.ajax({
+        url: "https://mp3.zzgoodqc.cn/api/songs/"+ids,//接口地址
+        type: "DELETE", //接口请求方式post/get
+        dataType: "json", //返回的数据类型格式
+        success: function (data) {
+          console.log(data); //请求的回调，成功
+          
+if (confirm("你确定要删除吗") == true) {
+   ajax()
+} 
+         
+        },
+      });
+      })
+        }
+ 
+     console.log( $(".tian"));
+      //添加
+
+      $(".tian").click(function () {
+       
+       
+layer.open({
+  type: 1,
+  skin: 'layui-layer-rim', //加上边框
+  area: ['420px', '320px'], //宽高
+  content: $('.aa')
+});
+ $('#submit').on('click',function(){
+       event.preventDefault();
+     let titles = $(".title").val();
+        let artists = $(".artist").val();
+        let albums = $(".album").val();
+        let years = $(".year").val();
+        let genres = $(".genre").val();
+    
+        console.log(titles);
+        console.log(artists);
+        console.log(albums);
+        console.log(years);
+        console.log(genres);
+        let data={
+   title:titles,
+   artist:artists,
+   album: albums,
+   year:years,
+   genre:genres
+   } 
+        event.preventDefault();
+        
+        
+        $.ajax({
+
+          url: "https://mp3.zzgoodqc.cn/api/songs", //接口地址
+          method: "POST", //接口请求方式post/get     
+        data:JSON.stringify(data), //返回的数据类型格式
+         headers:{
+            'Content-Type': 'application/json',
+         },
+
+          success: function (data) {
+            console.log(data); //请求的回调，成功
+            ajax()
+              //window.location.replace("4.21机试.html"); //替换当前文档
+          },
+        });
+
+})
+        })
+    //修改
+    $("table").on("click", 'button[id="xiu"]', function () {
+             //页面层
+
+layer.open({
+  type: 1,
+  skin: 'layui-layer-rim', //加上边框
+  area: ['420px', '320px'], //宽高
+  content: $('#hui')
+});
+ console.log($(this));
+        let titles = $(this).attr('data-title')
+      console.log(titles);
+        let artists = $(this).attr('data-artist')
+      console.log(artists);
+      let albums  = $(this).attr('data-album')
+      console.log(albums);
+      let years  = $(this).attr('data-year')
+      console.log(years);
+         let genres  = $(this).attr('data-genre')
+      console.log(genres);
+      //回显
+       $(".title2").val(titles);
+         $(".artist2").val(artists);
+        $(".album2").val(albums);
+        $(".year2").val(years);
+          $(".genre2").val(genres);
+ $('#submits').on('click',function(){
+   alert(1)
+ 
+     let titles = $(".title2").val();
+        let artists = $(".artist2").val();
+        let albums = $(".album2").val();
+        let years = $(".year2").val();
+        let genres = $(".genre2").val();
+    //console.log($(".title2").val());
+       
+        /* let data={
+   title:titles,
+   artist:artists,
+   album: albums,
+   year:years,
+   genre:genres
+   }  */
+      
+       
+          event.preventDefault();
+           
+        $.ajax({
+          url: "https://mp3.zzgoodqc.cn/api/songs", //接口地址
+         type: "post", //接口请求方式post/get     
+ dataType:'json',
+       /* data:{
+ title:titles,
+   artist:artists,
+   album: albums,
+   year:years,
+   genre:genres
+       }, */
+         headers:{
+            'Content-Type': 'application/json',
+         },
+          data:JSON.stringify({
+ title:titles,
+   artist:artists,
+   album: albums,
+   year:years,
+   genre:genres
+       }), //返回的数据类型格式
+       
+          success: function (data) {
+            console.log(data); //请求的回调，成功
+            //ajax()
+              //window.location.replace("4.21机试.html"); //替换当前文档
+          },
+        });
+
+})
+        })
+ //查看
+    $("table").on("click", 'button[id="cha"]', function () {
+     
+layer.open({
+  type: 1,
+  skin: 'layui-layer-rim', //加上边框
+  area: ['420px', '320px'], //宽高
+  content: $('#hui')
+});
+ console.log($(this).next());
+        let titles = $(this).next().attr('data-title')
+      console.log(titles);
+        let artists = $(this).next().attr('data-artist')
+      console.log(artists);
+      let albums  = $(this).next().attr('data-album')
+      console.log(albums);
+      let years  = $(this).next().attr('data-year')
+      console.log(years);
+         let genres  = $(this).next().attr('data-genre')
+      console.log(genres);
+      
+       $(".title2").val(titles);
+         $(".artist2").val(artists);
+        $(".album2").val(albums);
+        $(".year2").val(years);
+          $(".genre2").val(genres);
+                
+        })
+      
+    </script>
+  </body>
+</html>
